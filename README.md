@@ -8,7 +8,7 @@ Then send messages to others(have to know the target username), and see the reci
 Currently it runs locally(mongodb connects to 'mongodb://localhost/messageDB'), the cloud version with a public URL is on the way.
 
 **To use it**:  
-- Make sure the nodeJS(nodejs.org) and mongoDB(mongodb.org) is installed. 
+- Make sure the [nodeJS](nodejs.org) and [mongoDB](mongodb.org) is installed. 
 - download the 'messageAPP', 
 - cd into the folder and 'npm install' to install the dependencies.
 - 'npm start', then you can see 'Server running on port 3000' on the terminal(if using MAC)
