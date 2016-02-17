@@ -42,8 +42,8 @@ app.factory('AuthService',['$q', '$timeout', '$http','$rootScope',
 	    // handle success
 	    .success(function (data, status) {
 	      	if(status === 200 && data.status){
-	        	//
-	        	console.log(data.username);
+	        	
+	        	// console.log(data.username);
 
 	        	$rootScope.username = data.username;
 
