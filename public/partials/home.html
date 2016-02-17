@@ -1,0 +1,94 @@
+	<div class="header">
+      <div class="container">
+        <h1 class="text-center">Message APP</h1>
+      </div>
+    </div>
+
+	<div class = "main" ng-controller = "AppCtrl">
+
+		<table>
+			<tr>
+				<th><h1>Hi! {{userName}} &nbsp;&nbsp;&nbsp;</h1></th>
+				<th><div ng-controller="logoutController">
+  						<a ng-click='logout()' class="btn btn-default">Logout</a>
+					</div>
+				</th>
+			</tr>
+		</table>
+
+
+		<div class = "container">
+	
+		<h2>Send (Input to send)</h2>
+		<table class = "table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Message</th>
+					<th>Receiver</th>
+					<th>Action</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input class = "form-control" ng-model = "newMessage.title"></td>
+					<td><input class = "form-control" ng-model = "newMessage.message"></td>
+					<td><input class = "form-control" ng-model = "newMessage.receiver"></td>
+					<td><button class = "btn btn-primary" ng-click = "sendMessage()">Send</button></td>
+					<td><button class = "btn btn-info" ng-click = "deselect()">Clear</button></td>
+				</tr>
+				<tr ng-repeat = "message in messages | filter: {sender: userName}">
+					<td>{{message.title}}</td>
+					<td>{{message.message}}</td>
+					<td>{{message.receiver}}</td>
+					<td><button class = "btn btn-danger" ng-click = "remove(message._id)">Remove</button></td>
+					<td><button class = "btn btn-warning" ng-click = "retrieve(message._id)">Retrieve</button></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+
+		<div class = "container">
+	
+		<h2>Receive (Input to filter)</h2>
+		<table class = "table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Message</th>
+					<th>Sender</th>
+					<th>Action</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr >
+					<td><input class = "form-control" ng-model = "search.title" placeholder="Filter by title"></td>
+					<td><input class = "form-control" ng-model = "search.message" placeholder="Filter by message"></td>
+					<td><input class = "form-control" ng-model = "search.sender" placeholder="Filter by sender"></td>
+					<td><button class = "btn btn-primary" >Search</button></td>
+					<td><button class = "btn btn-info" ng-click = "deselect()">Clear</button></td>
+				</tr>
+				<tr ng-repeat = "message in messages | filter: {receiver: userName} 
+				| filter: {sender: search.sender} 
+				| filter: {message: search.message} 
+				| filter: {title: search.title}">
+					<td>{{message.title}}</td>
+					<td>{{message.message}}</td>
+					<td>{{message.sender}}</td>
+					<td><button class = "btn btn-danger" ng-click = "remove(message._id)">Remove</button></td>
+					<td><button class = "btn btn-warning" ng-click = "retrieve(message._id)">Retrieve</button></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
