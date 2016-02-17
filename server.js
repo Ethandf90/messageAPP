@@ -19,7 +19,7 @@ var app = express();
 // configuration ------------------------------------------
 
 // mongoose
-mongoose.connect('mongodb://localhost/messageDB');
+mongoose.connect('mongodb://localhost/messageDB -u root -p Jd9e5GSAsjmD');
 // mongoose.connect('mongodb://root:Jd9e5GSAsjmD@ec2-107-23-47-197.compute-1.amazonaws.com:27017/dummyDB');
 
 // require routes for login api
