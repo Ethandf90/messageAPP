@@ -21,7 +21,7 @@ There are two groups of API - loginAPI and messageAPI
 loginAPI: POST ./register
           POST ./login
           GET ./logout
-          (I learnt the autentication of MEAN from this blog: http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/#.VsP29JMrKb9)
+          (I learnt the autentication of MEAN from this [blog]( http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/#.VsP29JMrKb9))
           
 messageAPI: GET ./messages  -- description: to find all items; response: allMessages 
             POST ./messages -- description: to insert a new item into database; param: newMessage; reponse: newMessage
