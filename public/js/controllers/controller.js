@@ -3,9 +3,6 @@ app.controller('AppCtrl', ['$scope', '$http', 'MessageService', '$window', '$roo
 	function($scope, $http, MessageService, $window, $rootScope){
 	console.log("Hello from controller");
 
-	// $scope.selected = true;
-	// var selected = function(){$scope.selected != $scope.selected};
-
 	//get user name from AuthService
 	var userName = $rootScope.username;
 	$scope.userName = userName;
@@ -50,13 +47,6 @@ app.controller('AppCtrl', ['$scope', '$http', 'MessageService', '$window', '$roo
 			$window.alert(alert);
 		});
 	};
-
-	// $scope.update = function(){
-	// 	console.log($scope.person._id);
-	// 	$http.put('/contactlist/' + $scope.person._id, $scope.person).success(function(response){
-	// 		refresh();
-	// 	});
-	// };
 
 	$scope.deselect = function(){
 		$scope.newMessage = "";
