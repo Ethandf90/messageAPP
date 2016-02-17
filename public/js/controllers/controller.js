@@ -1,3 +1,4 @@
+//There are controllers: AppCtrl, loginController, loginController, registerController
 
 app.controller('AppCtrl', ['$scope', '$http', 'MessageService', '$window', '$rootScope', 
 	function($scope, $http, MessageService, $window, $rootScope){
