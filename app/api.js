@@ -1,3 +1,5 @@
+//messageAPI
+
 var Message = require('./models/message');
 
 module.exports = function (app) {
