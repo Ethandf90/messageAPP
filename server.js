@@ -19,9 +19,9 @@ var app = express();
 // configuration ------------------------------------------
 
 // mongoose
-// mongoose.connect('mongodb://localhost/messageDB');
+mongoose.connect('mongodb://localhost/messageDB');
 //ec2 db -- user:ethan pwd: ethan; db: messageDB
-mongoose.connect('mongodb://ethan:ethan@ec2-107-23-47-197.compute-1.amazonaws.com:27017/messageDB');
+// mongoose.connect('mongodb://ethan:ethan@ec2-107-23-47-197.compute-1.amazonaws.com:27017/messageDB');
 
 // require routes for login api
 var routes = require('./app/loginApi.js');
