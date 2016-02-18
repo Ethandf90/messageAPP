@@ -6,7 +6,8 @@ This is a simple nodeJS APP, where user can create account(username and password
 Then send messages to others(have to know the target username), and see the recieved messages from others. 
 
 This program runs locally(mongodb connects to 'mongodb://localhost/messageDB', in server.js)
-The application on AWS is [here](http://ec2-107-23-47-197.compute-1.amazonaws.com:3000/)
+
+The application on AWS is [http://ec2-107-23-47-197.compute-1.amazonaws.com:3000/](http://ec2-107-23-47-197.compute-1.amazonaws.com:3000/)
 
 **To configure it locally**:  
 - Make sure the [nodeJS](nodejs.org) and [mongoDB](mongodb.org) are installed. 
