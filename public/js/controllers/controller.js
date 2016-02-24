@@ -40,11 +40,10 @@ app.controller('AppCtrl', ['$scope', '$http', 'MessageService', '$window', '$roo
 
 	$scope.retrieve = function(id){
 		console.log("retrieve: " + id);
-		var Palindrome = isPalindrome("abccbba");
 		
 		$http.get('/messages/' + id).success(function(response){
 			// console.log(response.message);
-			var alert = "The retrieved message is: " + response.message + "\n" + "Is it Palindrome?   " + isPalindrome(response.message);
+			var alert = "The retrieved message is: " + response.message + "\n" + "Is it Palindrome?   " + response.isPalindrome;
 			$window.alert(alert);
 		});
 	};
@@ -53,26 +52,6 @@ app.controller('AppCtrl', ['$scope', '$http', 'MessageService', '$window', '$roo
 		$scope.newMessage = "";
 		$scope.search = "";
 	}
-
-	var isPalindrome = function(s) {
-        if(s === null){
-            return false;
-        }
-        
-        if(s.length === 0){
-            return true;
-        }
-        
-        s = s.replace("[^a-zA-Z0-9]","").toLowerCase();
-        
-        for(var i = 0; i < s.length; i++){
-            if(s.charAt(i) != s.charAt(s.length - 1 - i)){
-                return false;
-            }
-        }
-        
-        return true;
-	};
 
 }]);
 //--------------------------------------------------------

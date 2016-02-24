@@ -54,9 +54,33 @@ app.get('/messages/:id', function(req, res){
         if (err) {
             res.send(err);
         }
-        //here we send back the first object, otherwise res.json(message) dont send right data
-        res.json(messages[0]); 
+
+        //here we use the first object messages[0], otherwise res.json(message) dont send right data
+        var response = {message: messages[0].message, isPalindrome: isPalindrome(messages[0].message)};
+        console.log(response);
+
+        res.json(response); 
     });
 });
+
+var isPalindrome = function(s) {
+    if(s === null){
+        return false;
+    }
+        
+    if(s.length === 0){
+        return true;
+    }
+        
+    s = s.replace("[^a-zA-Z0-9]","").toLowerCase();
+        
+    for(var i = 0; i < s.length; i++){
+         if(s.charAt(i) != s.charAt(s.length - 1 - i)){
+             return false;
+        }
+    }
+        
+    return true;
+};
 
 }
