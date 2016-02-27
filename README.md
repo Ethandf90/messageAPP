@@ -1,6 +1,6 @@
 # messageAPP
 
-This is my first time using **MEAN Stack**. Basically it's a process of learning by doing.
+This is my first time using the combination of nodeJS and AngularJS. Basically it's a process of learning by doing.
 
 This is a simple nodeJS APP, where user can create account(username and password) and login. 
 Then send messages to others(have to know the target username), and see the recieved messages from others. 
