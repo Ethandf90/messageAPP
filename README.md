@@ -3,7 +3,7 @@
 This is my first time using the combination of nodeJS and AngularJS. Basically it's a process of learning by doing.
 
 This is a simple nodeJS APP, where user can create account(username and password) and login. 
-Then send messages to others(have to know the target username), and see the recieved messages from others. 
+Then send messages to others, and see the recieved messages from others. 
 
 This program runs locally(mongodb connects to 'mongodb://localhost/messageDB', in server.js)
 
